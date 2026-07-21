@@ -580,13 +580,30 @@ h1 em,
   justify-content: space-between;
 }
 
+.workspace-header > div:first-child {
+  flex: 1;
+  min-width: 0;
+}
+
 .workspace-header h2 {
-  max-width: 920px;
+  max-width: none;
   margin: 0;
   font-family: Impact, "Arial Black", sans-serif;
   font-size: clamp(2.7rem, 5vw, 5.8rem);
   line-height: 0.95;
+  letter-spacing: -.025em;
+  text-wrap: balance;
   text-transform: uppercase;
+}
+
+.workspace-header h2.is-long {
+  font-size: clamp(2.1rem, 4vw, 4.5rem);
+}
+
+.workspace-header h2.is-very-long {
+  font-size: clamp(1.7rem, 3vw, 3.4rem);
+  line-height: .98;
+  letter-spacing: -.035em;
 }
 
 .workspace-actions {
@@ -1531,6 +1548,8 @@ blockquote {
   .specimen-panel { width: min(560px, 100%); min-height: 520px; justify-self: center; }
   .preview-arena { min-height: 330px; }
   .workspace-header { align-items: flex-start; flex-direction: column; }
+  .workspace-header h2.is-long { font-size: clamp(1.8rem, 4.2vw, 2.6rem); }
+  .workspace-header h2.is-very-long { font-size: clamp(1.35rem, 3.6vw, 2.1rem); }
   .workspace-actions { width: 100%; justify-content: space-between; }
   .loop-steps { grid-template-columns: repeat(2, 1fr); }
   .loop-steps li:nth-child(2) { border-right: 0; }

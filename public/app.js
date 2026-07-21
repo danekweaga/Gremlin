@@ -322,7 +322,10 @@ function renderWorkspace(animate = false) {
   const progress = totalActiveHours > 0 ? Math.round((completedHours / totalActiveHours) * 100) : 0;
   const isVictory = buildTasks.length === 0 && completedTasks.length > 0;
 
-  elements.featureTitle.textContent = analysis.featureSummary;
+  const featureSummary = String(analysis.featureSummary || "Untitled feature").trim();
+  elements.featureTitle.textContent = featureSummary;
+  elements.featureTitle.classList.toggle("is-long", featureSummary.length > 24);
+  elements.featureTitle.classList.toggle("is-very-long", featureSummary.length > 38);
   const isLive = state.source === "openai" || state.source === "openrouter";
   elements.source.textContent = state.source === "openrouter"
     ? "LIVE / OPENROUTER"
