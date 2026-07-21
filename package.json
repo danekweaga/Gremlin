@@ -1,0 +1,16 @@
+{
+  "name": "gremlin-scope-planner",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "build": "node build.mjs",
+    "test": "node build.mjs && node --test tests/*.test.mjs",
+    "check": "node --check server.mjs && node --check public/app.js && node --check lib/analysis.mjs && node --check lib/vercel-api.mjs && node --check api/analyze.js && node --check api/health.js && node --check worker-site.mjs && node build.mjs && node --test tests/*.test.mjs"
+  }
+}

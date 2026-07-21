@@ -1,0 +1,10 @@
+.env
+.env.local
+.env.development
+.env.production
+.env.preview
+.git
+.npm-logs
+.pnpm-store
+node_modules
+coverage
