@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0b0a" />
+    <meta
+      name="description"
+      content="Gremlin turns hidden feature scope into a creature you can shrink, complete, and defeat."
+    />
+    <meta property="og:title" content="Gremlin — Your feature request is hiding something" />
+    <meta
+      property="og:description"
+      content="Reveal the hidden work. Cut the scope. Complete the tasks. Defeat the gremlin."
+    />
+    <title>Gremlin — Defeat unfinished work</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="ambient-grid" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <button class="wordmark" type="button" data-action="home" aria-label="Go to Gremlin home">
+        <span class="wordmark-mark" aria-hidden="true">G</span>
+        <span>GREMLIN</span>
+      </button>
+      <div class="header-status">
+        <span class="status-light" aria-hidden="true"></span>
+        <span>SPECIMEN LAB / ONLINE</span>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="landing" id="landing-view" aria-labelledby="hero-title">
+        <div class="landing-copy">
+          <p class="eyebrow"><span>01</span> FEATURE CONTAINMENT UNIT</p>
+          <h1 id="hero-title">Your tiny request<br /><em>has teeth.</em></h1>
+          <p class="hero-copy">
+            Feed Gremlin a feature request. It finds the work hiding underneath,
+            turns it into a creature, and disappears only when the job is done.
+          </p>
+
+          <form class="scope-form" id="scope-form" novalidate>
+            <div class="field-group">
+              <label for="feature-input">What are you building?</label>
+              <div class="text-input-shell">
+                <span class="input-prefix" aria-hidden="true">&gt;</span>
+                <input
+                  id="feature-input"
+                  name="feature"
+                  type="text"
+                  minlength="3"
+                  maxlength="120"
+                  autocomplete="off"
+                  placeholder="Add dark mode"
+                  required
+                />
+              </div>
+              <p class="field-error" id="feature-error" aria-live="polite"></p>
+            </div>
+
+            <div class="estimate-row">
+              <div class="field-group estimate-field">
+                <label for="estimate-input">Your estimate</label>
+                <div class="number-input-shell">
+                  <input
+                    id="estimate-input"
+                    name="estimate"
+                    type="number"
+                    inputmode="decimal"
+                    min="0.5"
+                    max="10000"
+                    step="0.5"
+                    value="2"
+                    required
+                  />
+                  <span>HOURS</span>
+                </div>
+                <p class="field-error" id="estimate-error" aria-live="polite"></p>
+              </div>
+              <button class="primary-button reveal-button" type="submit">
+                <span>REVEAL THE GREMLIN</span>
+                <span class="button-arrow" aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </form>
+
+          <div class="examples" aria-label="Example feature requests">
+            <span>TRY A SPECIMEN:</span>
+            <button type="button" data-example="Add dark mode" data-estimate="2">Dark mode</button>
+            <button type="button" data-example="Add Google login" data-estimate="3">Google login</button>
+            <button type="button" data-example="Add notifications" data-estimate="4">Notifications</button>
+            <button type="button" data-example="Add a comment section" data-estimate="5">Comments</button>
+          </div>
+        </div>
+
+        <aside class="specimen-panel" aria-label="Gremlin preview">
+          <div class="panel-rivet rivet-one" aria-hidden="true"></div>
+          <div class="panel-rivet rivet-two" aria-hidden="true"></div>
+          <div class="specimen-heading">
+            <div>
+              <span>UNIDENTIFIED SCOPE</span>
+              <strong>SUBJECT: #000</strong>
+            </div>
+            <span class="hazard-label">UNSTABLE</span>
+          </div>
+          <div class="preview-arena">
+            <div class="preview-orbit orbit-one" aria-hidden="true"></div>
+            <div class="preview-orbit orbit-two" aria-hidden="true"></div>
+            <div class="preview-creature" id="preview-creature" aria-hidden="true"></div>
+          </div>
+          <div class="scanline" aria-hidden="true"></div>
+          <div class="specimen-readout">
+            <div><span>COMPLEXITY</span><strong>UNKNOWN</strong></div>
+            <div><span>DEPENDENCIES</span><strong>HIDING</strong></div>
+            <div><span>STATUS</span><strong class="acid-text">HUNGRY</strong></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="workspace is-hidden" id="workspace-view" aria-labelledby="feature-title">
+        <div class="workspace-header">
+          <div>
+            <p class="eyebrow"><span>02</span> ACTIVE CONTAINMENT</p>
+            <h2 id="feature-title">Add dark mode</h2>
+          </div>
+          <div class="workspace-actions">
+            <span class="source-pill" id="analysis-source">DEMO BRAIN</span>
+            <button class="ghost-button" type="button" data-action="new-feature">+ NEW FEATURE</button>
+          </div>
+        </div>
+
+        <ol class="loop-steps" aria-label="Gremlin workflow">
+          <li class="is-complete"><span>01</span> REVEAL IT</li>
+          <li class="is-active"><span>02</span> SCOPE IT</li>
+          <li><span>03</span> BUILD IT</li>
+          <li><span>04</span> DEFEAT IT</li>
+        </ol>
+
+        <div class="dashboard-grid">
+          <section class="arena-card card" aria-labelledby="specimen-title">
+            <div class="card-header">
+              <div>
+                <p class="micro-label">LIVE SPECIMEN</p>
+                <h3 id="specimen-title">SCOPE GREMLIN</h3>
+              </div>
+              <div class="threat-badge" id="threat-badge">THREAT 08</div>
+            </div>
+
+            <div class="gremlin-arena" id="gremlin-arena">
+              <div class="arena-grid" aria-hidden="true"></div>
+              <div class="containment-ring ring-a" aria-hidden="true"></div>
+              <div class="containment-ring ring-b" aria-hidden="true"></div>
+              <div
+                class="gremlin-host"
+                id="gremlin-host"
+                role="img"
+                aria-label="An animated gremlin representing the remaining project work"
+              ></div>
+              <div class="victory-state is-hidden" id="victory-state" aria-live="polite">
+                <span class="victory-kicker">CONTAINMENT CLEARED</span>
+                <strong>GREMLIN<br />DEFEATED</strong>
+                <p>Feature complete. Nothing left hiding.</p>
+                <button class="primary-button" type="button" data-action="share">SHARE THE VICTORY</button>
+              </div>
+              <div class="arena-caption">
+                <span id="mutation-label">11 MUTATIONS DETECTED</span>
+                <span id="remaining-label">19H REMAINING</span>
+              </div>
+            </div>
+
+            <div class="progress-block">
+              <div class="progress-heading">
+                <span>FEATURE COMPLETION</span>
+                <strong id="progress-percent">0%</strong>
+              </div>
+              <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track">
+                <span id="progress-fill"></span>
+              </div>
+              <p id="progress-copy">Complete tasks to weaken the gremlin.</p>
+            </div>
+          </section>
+
+          <section class="scope-summary card" aria-labelledby="scope-summary-title">
+            <div class="card-header compact">
+              <div>
+                <p class="micro-label">SCOPE SCAN</p>
+                <h3 id="scope-summary-title">WHAT IT FOUND</h3>
+              </div>
+            </div>
+            <div class="metric-grid">
+              <div class="metric original">
+                <span>YOUR ESTIMATE</span>
+                <strong id="original-estimate">2H</strong>
+                <small>BEFORE SCANNING</small>
+              </div>
+              <div class="metric realistic">
+                <span>REALISTIC RANGE</span>
+                <strong id="realistic-estimate">19–26H</strong>
+                <small id="scope-growth">9.5× SCOPE GROWTH</small>
+              </div>
+              <div class="metric">
+                <span>COMPLEXITY</span>
+                <strong id="complexity-score">08/10</strong>
+                <small>CREATURE THREAT</small>
+              </div>
+              <div class="metric">
+                <span>HIDDEN TASKS</span>
+                <strong id="hidden-count">10</strong>
+                <small>NOW ACCOUNTED FOR</small>
+              </div>
+            </div>
+            <blockquote id="verdict">
+              “You estimated 2 hours. Gremlin found 19–26 hours and several tasks living behind the drywall.”
+            </blockquote>
+            <div class="mvp-note">
+              <span class="mvp-icon" aria-hidden="true">M</span>
+              <div>
+                <strong>THE SURVIVABLE MVP</strong>
+                <p id="mvp-recommendation">Ship the smallest reliable version with the core workflow and one tested release path.</p>
+              </div>
+            </div>
+            <div class="summary-buttons">
+              <button class="primary-button" type="button" data-action="cut-mvp">
+                CUT TO MVP <span aria-hidden="true">↘</span>
+              </button>
+              <button class="ghost-button" type="button" data-action="share">SHARE RESULT</button>
+            </div>
+          </section>
+        </div>
+
+        <section class="task-section" aria-labelledby="task-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow"><span>03</span> WORK QUEUE</p>
+              <h2 id="task-heading">Finish the work.<br /><em>Erase the evidence.</em></h2>
+            </div>
+            <div class="task-total">
+              <span>REMAINING LOAD</span>
+              <strong id="remaining-hours">19H</strong>
+            </div>
+          </div>
+
+          <div class="task-columns">
+            <div class="task-column build-column">
+              <div class="column-heading">
+                <div><span class="column-dot acid"></span><strong>BUILD NOW</strong></div>
+                <span id="build-count">0 TASKS</span>
+              </div>
+              <div class="task-list" id="build-list"></div>
+            </div>
+
+            <div class="task-column completed-column">
+              <div class="column-heading">
+                <div><span class="column-dot pink"></span><strong>COMPLETED</strong></div>
+                <span id="completed-count">0 TASKS</span>
+              </div>
+              <div class="task-list" id="completed-list"></div>
+            </div>
+
+            <div class="task-column later-column">
+              <div class="column-heading">
+                <div><span class="column-dot gray"></span><strong>SAVE FOR LATER</strong></div>
+                <span id="later-count">0 TASKS</span>
+              </div>
+              <div class="task-list" id="later-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="intel-section" aria-labelledby="intel-heading">
+          <div class="section-heading compact-heading">
+            <div>
+              <p class="eyebrow"><span>04</span> FIELD NOTES</p>
+              <h2 id="intel-heading">What was hiding</h2>
+            </div>
+          </div>
+          <div class="intel-grid">
+            <article class="intel-card">
+              <span class="intel-number">A</span>
+              <h3>ASSUMPTIONS</h3>
+              <ul id="assumption-list"></ul>
+            </article>
+            <article class="intel-card">
+              <span class="intel-number">D</span>
+              <h3>DEPENDENCIES</h3>
+              <ul id="dependency-list"></ul>
+            </article>
+            <article class="intel-card danger">
+              <span class="intel-number">R</span>
+              <h3>RISKS</h3>
+              <ul id="risk-list"></ul>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>GREMLIN / SCOPE CONTAINMENT SYSTEM</span>
+      <span>REVEAL IT · SCOPE IT · BUILD IT · DEFEAT IT</span>
+    </footer>
+
+    <div class="reveal-overlay is-hidden" id="reveal-overlay" role="dialog" aria-modal="true" aria-labelledby="reveal-title">
+      <div class="reveal-console">
+        <div class="console-topline">
+          <span>GREMLIN SCOPE SCANNER</span>
+          <span id="scan-percent">00%</span>
+        </div>
+        <div class="scanner-visual" aria-hidden="true">
+          <div class="scanner-beam"></div>
+          <div class="scanner-blip blip-a"></div>
+          <div class="scanner-blip blip-b"></div>
+          <div class="scanner-blip blip-c"></div>
+        </div>
+        <p class="micro-label">ANALYZING REQUEST</p>
+        <h2 id="reveal-title">Checking your assumptions…</h2>
+        <div class="console-progress"><span id="scan-progress"></span></div>
+        <div class="console-log" id="console-log" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <dialog class="share-dialog" id="share-dialog">
+      <form method="dialog" class="dialog-shell">
+        <button class="dialog-close" value="close" aria-label="Close share dialog">×</button>
+        <p class="eyebrow"><span>05</span> FIELD REPORT</p>
+        <h2 id="share-title">Share the specimen</h2>
+        <canvas id="share-canvas" width="1200" height="630" aria-label="Shareable Gremlin result card"></canvas>
+        <p class="share-copy" id="share-copy"></p>
+        <div class="dialog-actions">
+          <button class="primary-button" type="button" data-action="download-card">DOWNLOAD CARD</button>
+          <button class="ghost-button" type="button" data-action="copy-result">COPY TEXT</button>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
