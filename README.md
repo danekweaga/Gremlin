@@ -4,7 +4,7 @@ Gremlin turns hidden feature scope into a creature that shrinks as work is cut o
 
 ## Run locally
 
-Requires Node.js 22 or newer. The app deliberately has no third-party runtime dependencies.
+Requires Node.js 24. The app deliberately has no third-party runtime dependencies.
 
 ```bash
 npm run dev
